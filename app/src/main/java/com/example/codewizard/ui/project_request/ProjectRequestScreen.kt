@@ -264,19 +264,26 @@ fun ListSection(
                 content.forEach { item ->
                     Card(
                         shape = MaterialTheme.shapes.medium,
-                        border = BorderStroke(2.dp, MaterialTheme.colorScheme.outline),
+                        border = BorderStroke(2.dp, MaterialTheme.colorScheme.outlineVariant),
                         colors = CardDefaults.cardColors(
                             containerColor = if (selectedContent.contains(item))
                                 MaterialTheme.colorScheme.primary
                             else
-                                MaterialTheme.colorScheme.surface
+                                MaterialTheme.colorScheme.surfaceVariant
                         ),
                         modifier = Modifier
                             .clickable { onSelect(item) }
+                            .padding(dimensionResource(R.dimen.padding_small))
                     ) {
                         Text(
                             text = item,
-                            modifier = Modifier.padding(dimensionResource(R.dimen.padding_small)),
+                            style = MaterialTheme.typography.bodyMedium.copy(
+                                color = if (selectedContent.contains(
+                                        item
+                                    )
+                                ) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface
+                            ),
+                            modifier = Modifier.padding(dimensionResource(R.dimen.padding_small))
                         )
                     }
                 }
