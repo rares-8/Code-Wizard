@@ -1,1 +1,1 @@
-[![App video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=_CU0ecKeGU8)
+[![App video](https://img.youtube.com/vi/_CU0ecKeGU8/0.jpg)](https://www.youtube.com/watch?v=_CU0ecKeGU8)
